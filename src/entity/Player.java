@@ -20,6 +20,11 @@ public class Player extends Entity{
         this.gp = gp;
         this.keyH = keyH;
 
+        solidArea = new Rectangle();
+        solidArea.x = 8;
+        solidArea.y = 16;
+        solidArea.width = 32;
+        solidArea.height = 32;
 
 
         setDefaultValues();
@@ -56,16 +61,36 @@ public class Player extends Entity{
 
             if(keyH.upPressed == true){
                 direction = "up";
-                y -= speed;
+
             } else if (keyH.downPressed == true) {
                 direction = "down";
-                y += speed;
+
             } else if (keyH.leftPressed == true) {
                 direction = "left";
-                x -= speed;
+
             } else if (keyH.rightPressed == true) {
                 direction = "right";
-                x += speed;
+
+            }
+
+            collisonOn = false;
+            gp.cChecker.checkTile(this);
+
+            if(collisonOn == false){
+                switch (direction){
+                    case "up":
+                        y -= speed;
+                        break;
+                    case "down":
+                        y += speed;
+                        break;
+                    case "left":
+                        x -= speed;
+                        break;
+                    case "right":
+                        x += speed;
+                        break;
+                }
             }
 
             spriteCounter++;
