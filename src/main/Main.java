@@ -1,6 +1,5 @@
 package main;
 
-/asdfasfd
 import javax.swing.*;
 
 public class Main {
