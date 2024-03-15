@@ -16,7 +16,10 @@ public class Player extends Entity{
     public final int screenX;
     public final int screenY;
 
-    int hasKey = 0;
+    int hasGumus = 0;
+    int hasAltin = 0;
+    int hasZumrut = 0;
+    int hasBakir = 0;
 
 
     public Player(GamePanel gp , KeyHandler keyH){
@@ -60,14 +63,14 @@ public class Player extends Entity{
     public void getPlayerImage(){
         try {
 
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/charachter.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/up1.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/up2.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/down1.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/down2.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/left2.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/right.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/right2.png"));
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -135,21 +138,49 @@ public class Player extends Entity{
 
     public void pickupObject(int i){
 
-        if(i != 999 && gp.obj[i] != null  ){
+        if(i != 999 && gp.obj[i] != null ){
+
+
+
+            String objectName = gp.obj[i].name;
 
             int treasureX = gp.obj[i].worldX;
             int treasureY = gp.obj[i].worldY;
 
-            System.out.println("hazineyi bu koordinatta (" + treasureX +", " + treasureY+") buldum");
+            System.out.println( objectName + "hazineyi bu koordinatta (" + treasureX +", " + treasureY+") buldum");
 
 
-            //////////////////////
-            String objectName = gp.obj[i].name;
+            //////////
+
             switch (objectName){
-
+                case "Gumus" :
+                    hasGumus++;
+                    gp.obj[i] = null;
+                    System.out.println(hasGumus + " tane Gumus toplandi");
+                    break;
+                case "Zumrut":
+                    hasZumrut++;
+                    gp.obj[i] = null;
+                    System.out.println(hasZumrut + " tane Zumrut toplandi");
+                    break;
+                case "Bakir":
+                    hasBakir++;
+                    gp.obj[i] = null;
+                    System.out.println(hasBakir + " tane Bakır toplandi");
+                    break;
+                case "gold":
+                    hasAltin++;
+                    gp.obj[i] = null;
+                    System.out.println( hasAltin + " tane Altin Sandigi toplandi");
+                    break;
+//                default:
+//                    hasAltin++;
+//                    gp.obj[i] = null;
+//                    System.out.println( hasAltin + " tane Altin Sandigi toplandi");
+//                    break;
             }
 
-            gp.obj[i] = null;
+            ////////////
 
         }
 

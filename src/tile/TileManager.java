@@ -159,7 +159,18 @@ public class TileManager {
                     worldY+gp.tileSize>gp.player.worldY-gp.player.screenY &&
                     worldY-gp.tileSize<gp.player.worldY + gp.player.screenY)
             {
-                g2.drawImage( tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+
+                //ağaç için
+                if(tileNum == 3)
+                {
+                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 2, gp.tileSize * 2, null);
+//                    worldCol += 2;
+//                    worldRow += 2;
+
+                }else if(tileNum != 50){
+                    g2.drawImage( tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+                }
+
 
 
             }

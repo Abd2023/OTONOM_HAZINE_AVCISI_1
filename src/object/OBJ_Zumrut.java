@@ -7,7 +7,7 @@ public class OBJ_Zumrut extends SuperObject{
 
     public OBJ_Zumrut(){
 
-        name = "zumrut";
+        name = "Zumrut";
         try{
 
             image = ImageIO.read(getClass().getResourceAsStream("/objects/zumrut.png"));

@@ -53,6 +53,9 @@ public class HaritaGuncelle {
             int sutun = rand.nextInt(BOYUT);
             if (harita[satir][sutun] == 0) {
                 harita[satir][sutun] = 3;
+                harita[satir + 1][sutun] = 50;
+                harita[satir][sutun + 1] = 50;
+                harita[satir + 1][sutun + 1] = 50;
                 sayac++;
             }
         }
