@@ -3,11 +3,11 @@ package object;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
-public class OBJ_AltinSandigi extends SuperObject{
+public class OBJ_Gold extends SuperObject{
 
-    public void OBJ_AltinSandigi(){
+    public OBJ_Gold(){
 
-        name = "altinSandigi";
+        name = "gold";
         try{
 
             image = ImageIO.read(getClass().getResourceAsStream("/objects/gold.png"));
@@ -15,5 +15,4 @@ public class OBJ_AltinSandigi extends SuperObject{
             e.printStackTrace();
         }
     }
-
 }

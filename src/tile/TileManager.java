@@ -159,7 +159,16 @@ public class TileManager {
                     worldY+gp.tileSize>gp.player.worldY-gp.player.screenY &&
                     worldY-gp.tileSize<gp.player.worldY + gp.player.screenY)
             {
-                g2.drawImage( tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+                if(tileNum == 3)
+                {
+                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 3, gp.tileSize * 3, null);
+                    screenX = screenX + 3* gp.tileSize ;
+                    screenY =  screenY + 3* gp.tileSize ;
+
+                }else {
+                    g2.drawImage( tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+                }
+
 
 
             }

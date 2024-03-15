@@ -1,9 +1,6 @@
 package main;
 
-import object.OBJ_AltinSandigi;
-import object.OBJ_Bakir;
-import object.OBJ_Gumus;
-import object.OBJ_Zumrut;
+import object.*;
 
 public class AssetSetter {
 
@@ -31,15 +28,13 @@ public class AssetSetter {
         gp.obj[3].worldY = 24 * gp.tileSize;
 
 
-        gp.obj[5] = new OBJ_AltinSandigi();
-        gp.obj[5].worldX = 10 * gp.tileSize;
-        gp.obj[5].worldY = 26 * gp.tileSize;
+        gp.obj[4] = new OBJ_Gold();
+        gp.obj[4].worldX = 10 * gp.tileSize;
+        gp.obj[4].worldY = 26 * gp.tileSize;
 
-
-        gp.obj[5] = new OBJ_AltinSandigi();
-        gp.obj[5].worldX = 10 * gp.tileSize;
-        gp.obj[5].worldY = 28 * gp.tileSize;
-
+        gp.obj[4] = new OBJ_Gold();
+        gp.obj[4].worldX = 10 * gp.tileSize;
+        gp.obj[4].worldY = 28 * gp.tileSize;
 
 
 
