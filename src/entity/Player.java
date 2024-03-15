@@ -16,6 +16,8 @@ public class Player extends Entity{
     public final int screenX;
     public final int screenY;
 
+    int hasKey = 0;
+
 
     public Player(GamePanel gp , KeyHandler keyH){
 
@@ -32,6 +34,10 @@ public class Player extends Entity{
         solidArea = new Rectangle();
         solidArea.x = 8;
         solidArea.y = 16;
+
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
+
         solidArea.width = 32;
         solidArea.height = 32;
 
@@ -89,6 +95,11 @@ public class Player extends Entity{
             collisonOn = false;
             gp.cChecker.checkTile(this);
 
+
+            int objIndex =  gp.cChecker.checkObject(this, true);
+
+            pickupObject(objIndex);
+
             if(collisonOn == false){
                 switch (direction){
                     case "up":
@@ -120,6 +131,30 @@ public class Player extends Entity{
 
 
     }
+
+
+    public void pickupObject(int i){
+
+        if(i != 999 && gp.obj[i] != null  ){
+
+            int treasureX = gp.obj[i].worldX;
+            int treasureY = gp.obj[i].worldY;
+
+            System.out.println("hazineyi bu koordinatta (" + treasureX +", " + treasureY+") buldum");
+
+
+            //////////////////////
+            String objectName = gp.obj[i].name;
+            switch (objectName){
+
+            }
+
+            gp.obj[i] = null;
+
+        }
+
+    }
+
     public void draw(Graphics2D g2){
 
 //        g2.setColor(Color.white);
