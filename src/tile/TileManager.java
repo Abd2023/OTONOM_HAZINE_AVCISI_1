@@ -79,9 +79,9 @@ public class TileManager {
             tile[12].image = ImageIO.read(getClass().getResourceAsStream("/tiles/snowWall1.png"));
             tile[12].collision = true;
 
-            tile[13] = new Tile();
-            tile[13].image = ImageIO.read(getClass().getResourceAsStream("/tiles/redtile.png"));
-            tile[13].collision = true;
+//            tile[13] = new Tile();
+//            tile[13].image = ImageIO.read(getClass().getResourceAsStream("/tiles/redtile.png"));
+//            tile[13].collision = true;
 
         }catch (IOException e){
             e.printStackTrace();
@@ -173,14 +173,50 @@ public class TileManager {
 
                 }
 
-                // Land Mountain
-//                else if(tileNum == 7)
-//                {
-//                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 10, gp.tileSize * 10, null);
-////                    worldCol += 2;
-////                    worldRow += 2;
-//
-//                }
+                //Land Tree için
+                else if(tileNum == 2)
+                {
+                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 2, gp.tileSize * 2, null);
+//                    worldCol += 2;
+//                    worldRow += 2;
+
+                }
+
+                else if(tileNum == 9)
+                {
+                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 2, gp.tileSize * 2, null);
+//                    worldCol += 2;
+//                    worldRow += 2;
+
+                }
+// Land Mountain
+                else if(tileNum == 7)
+                {
+                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 3, gp.tileSize * 3, null);
+//                    worldCol += 2;
+//                    worldRow += 2;
+
+                }
+
+                // snow Mountain
+                else if(tileNum == 10)
+                {
+                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 3, gp.tileSize * 3, null);
+//                    worldCol += 2;
+//                    worldRow += 2;
+
+                }
+
+                //Snow kayak için
+                else if(tileNum == 11)
+                {
+                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 2, gp.tileSize * 2, null);
+//                    worldCol += 2;
+//                    worldRow += 2;
+
+                }
+
+
                 else if(tileNum != 50){
                     g2.drawImage( tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
                 }

@@ -5,12 +5,12 @@ import main.GamePanel;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
-public class NPC_birdland extends Entity {
+public class NPC_SnowAndLand extends Entity {
 
     private int moveCounter; // Hareket sayacı
     private final int moveDistance = 1; // Hareket mesafesi
 
-    public NPC_birdland(GamePanel gp) {
+    public NPC_SnowAndLand(GamePanel gp) {
         super(gp);
         direction = "down"; // Başlangıç yönü aşağıya doğru
         speed = 1;
@@ -21,14 +21,14 @@ public class NPC_birdland extends Entity {
 
     public void getImage() {
         try {
-            up1 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/npc/birdLand.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/npc/beeSnowAndLand.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
