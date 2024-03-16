@@ -79,6 +79,10 @@ public class TileManager {
             tile[12].image = ImageIO.read(getClass().getResourceAsStream("/tiles/snowWall1.png"));
             tile[12].collision = true;
 
+            tile[13] = new Tile();
+            tile[13].image = ImageIO.read(getClass().getResourceAsStream("/tiles/redtile.png"));
+            tile[13].collision = true;
+
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -139,6 +143,7 @@ public class TileManager {
 
         int worldCol = 0;
         int worldRow = 0;
+
 
 
         while(worldCol < gp.maxWorldCol && worldRow < gp.maxWorldRow){

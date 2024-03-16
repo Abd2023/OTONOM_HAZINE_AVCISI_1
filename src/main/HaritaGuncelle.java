@@ -82,6 +82,41 @@ public class HaritaGuncelle {
 //        }
 
 
+        int kusunUcmayaBasladigiYerX;
+        int kusunUcmayaBasladigiYerY;
+
+        // kusun ucacagi kirmizi tilelar
+        sayac=0;
+        while (sayac < 2) {
+            int satir = rand.nextInt(BOYUT);
+            int sutun = rand.nextInt(BOYUT);
+
+            if (harita[satir][sutun] == 0
+                    &&harita[satir+1][sutun] == 0
+                    &&harita[satir+2][sutun] == 0
+                    &&harita[satir+3][sutun] == 0
+                    &&harita[satir+4][sutun] == 0
+                    &&harita[satir+5][sutun] == 0
+                    &&harita[satir+6][sutun] == 0
+            ) {
+                harita[satir][sutun] = 13;
+                harita[satir+1][sutun] = 13;
+                harita[satir+2][sutun] = 13;
+                harita[satir+3][sutun] = 13;
+                harita[satir+4][sutun] = 13;
+                harita[satir+5][sutun] = 13;
+                harita[satir+6][sutun] = 13;
+
+
+                sayac++;
+                kusunUcmayaBasladigiYerX=satir+3;
+                kusunUcmayaBasladigiYerY=sutun;
+
+            }
+        }
+
+
+
 
         //mehmet
         // duvarlar deneme

@@ -2,6 +2,8 @@ package main;
 
 import object.*;
 
+import entity.NPC_birdland;
+
 public class AssetSetter {
 
     GamePanel gp;
@@ -10,9 +12,9 @@ public class AssetSetter {
         this.gp = gp;
     }
 
-    public void setObject(){
+    public void setObject() {
         gp.obj[0] = new OBJ_Zumrut();
-        gp.obj[0].worldX = 4 * gp.tileSize;
+        gp.obj[0].worldX = 30 * gp.tileSize;
         gp.obj[0].worldY = 11 * gp.tileSize;
 
         gp.obj[1] = new OBJ_Zumrut();
@@ -32,12 +34,18 @@ public class AssetSetter {
         gp.obj[4].worldX = 10 * gp.tileSize;
         gp.obj[4].worldY = 26 * gp.tileSize;
 
-        gp.obj[4] = new OBJ_Gold();
-        gp.obj[4].worldX = 10 * gp.tileSize;
-        gp.obj[4].worldY = 28 * gp.tileSize;
+        gp.obj[5] = new OBJ_Gold();
+        gp.obj[5].worldX = 10 * gp.tileSize;
+        gp.obj[5].worldY = 28 * gp.tileSize;
 
+    }
 
+        public void setNPC() {
+            gp.npc[0]=new NPC_birdland(gp);
+            gp.npc[0].worldX=gp.tileSize*21;
+            gp.npc[0].worldY=gp.tileSize*21;
 
+        }
 
         ////////////////////////
 ////        kapı vermek için
@@ -58,4 +66,4 @@ public class AssetSetter {
 
     }
 
-}
+
