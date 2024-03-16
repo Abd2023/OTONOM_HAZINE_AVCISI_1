@@ -38,20 +38,125 @@ public class HaritaGuncelle {
                 sayac++;
             }
         }
+
+//        // Land Mountain için
+//        sayac=0;
+//        while (sayac < 2) {
+//            int satir = rand.nextInt(BOYUT -25);
+//            int sutun = rand.nextInt(BOYUT -25);
+//            if (harita[satir][sutun] == 0) {
+//                harita[satir][sutun] = 7;
+//
+//                harita[satir + 1][sutun] = 50;
+//                harita[satir + 2][sutun] = 50;
+//                harita[satir+ 3][sutun] = 50;
+//                harita[satir + 4][sutun] = 50;
+//                harita[satir+5][sutun] = 50;
+//                harita[satir+6][sutun] = 50;
+//                harita[satir+7][sutun] = 50;
+//                harita[satir+8][sutun] = 50;
+//                harita[satir+9][sutun] = 50;
+//                harita[satir+10][sutun] =50;
+//                harita[satir+11][sutun] = 50;
+//                harita[satir+12][sutun] = 50;
+//                harita[satir+13][sutun] = 50;
+//                harita[satir+14][sutun] = 50;
+//
+//                harita[satir][sutun+1] = 50;
+//                harita[satir][sutun+2] = 50;
+//                harita[satir][sutun+3] = 50;
+//                harita[satir][sutun+4] = 50;
+//                harita[satir][sutun+5] = 50;
+//                harita[satir][sutun+6] = 50;
+//                harita[satir][sutun+7] = 50;
+//                harita[satir][sutun+8] = 50;
+//                harita[satir][sutun+9] = 50;
+//                harita[satir][sutun+10] = 50;
+//                harita[satir][sutun+11] = 50;
+//                harita[satir][sutun+12] = 50;
+//                harita[satir][sutun+13] = 50;
+//                harita[satir][sutun+14] = 50;
+//
+//                sayac++;
+//            }
+//        }
+
+
+
+        //mehmet
+        // duvarlar deneme
         sayac=0;
         while (sayac < 5) {
             int satir = rand.nextInt(BOYUT);
             int sutun = rand.nextInt(BOYUT);
-            if (harita[satir][sutun] == 0) {
-                harita[satir][sutun] = 7;
+
+            if (harita[satir][sutun] == 0
+                    &&harita[satir][sutun+1] == 0
+                    &&harita[satir][sutun+2] == 0
+                    &&harita[satir][sutun+3] == 0
+                    &&harita[satir][sutun+4] == 0
+                    &&harita[satir][sutun+5] == 0
+                    &&harita[satir][sutun+6] == 0
+                    &&harita[satir][sutun+7] == 0
+                    &&harita[satir][sutun+8] == 0
+                    &&harita[satir][sutun+9] == 0 ) {
+                harita[satir][sutun+1] = 8;
+                harita[satir][sutun+2] = 8;
+                harita[satir][sutun+3] = 8;
+                harita[satir][sutun+4] = 8;
+                harita[satir][sutun+5] = 8;
+                harita[satir][sutun+6] = 8;
+                harita[satir][sutun+7] = 8;
+                harita[satir][sutun+8] = 8;
+                harita[satir][sutun+9] = 8;
+                harita[satir][sutun] = 8;
+
                 sayac++;
             }
         }
+
+
+        // kıs taraf duvarlar
         sayac=0;
         while (sayac < 5) {
             int satir = rand.nextInt(BOYUT);
             int sutun = rand.nextInt(BOYUT);
-            if (harita[satir][sutun] == 0) {
+            if (harita[satir][sutun] == 1
+                    &&harita[satir][sutun+1] == 1
+                    &&harita[satir][sutun+2] == 1
+                    &&harita[satir][sutun+3] == 1
+                    &&harita[satir][sutun+4] == 1
+                    &&harita[satir][sutun+5] == 1
+                    &&harita[satir][sutun+6] == 1
+                    &&harita[satir][sutun+7] == 1
+                    &&harita[satir][sutun+8] == 1
+                    &&harita[satir][sutun+9] == 1 ) {
+                harita[satir][sutun+1] = 12;
+                harita[satir][sutun+2] = 12;
+                harita[satir][sutun+3] = 12;
+                harita[satir][sutun+4] = 12;
+                harita[satir][sutun+5] = 12;
+                harita[satir][sutun+6] = 12;
+                harita[satir][sutun+7] = 12;
+                harita[satir][sutun+8] = 12;
+                harita[satir][sutun+9] = 12;
+                harita[satir][sutun] = 12;
+
+                sayac++;
+            }
+        }
+
+
+
+
+        sayac=0;
+        while (sayac < 5) {
+            int satir = rand.nextInt(BOYUT);
+            int sutun = rand.nextInt(BOYUT);
+            if (harita[satir][sutun] == 0
+            &&harita[satir + 1][sutun] == 0
+            &&harita[satir][sutun +1] == 0
+            &&harita[satir + 1][sutun + 1] == 0) {
                 harita[satir][sutun] = 3;
                 harita[satir + 1][sutun] = 50;
                 harita[satir][sutun + 1] = 50;
@@ -86,6 +191,29 @@ public class HaritaGuncelle {
                 sayac++;
             }
         }
+
+
+//        // duar için
+//        sayac=0;
+//        while (sayac < 5) {
+//            int satir = rand.nextInt(BOYUT);
+//            int sutun = rand.nextInt(BOYUT);
+//            if (harita[satir][sutun] == 0) {
+//                harita[satir][sutun] = 8;
+//
+//                harita[satir][sutun + 1] = 50;
+//                harita[satir][sutun + 2] = 50;
+//                harita[satir][sutun + 3] = 50;
+//                harita[satir][sutun + 5] = 50;
+//                harita[satir][sutun + 6] = 50;
+//                harita[satir][sutun + 7] = 50;
+//                harita[satir][sutun + 8] = 50;
+//                harita[satir][sutun + 9] = 50;
+//
+//                sayac++;
+//            }
+//        }
+
 
     }
 

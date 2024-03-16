@@ -161,23 +161,28 @@ public class TileManager {
             {
 
                 //ağaç için
-                if(tileNum == 3)
-                {
+                if(tileNum == 3) {
                     g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 2, gp.tileSize * 2, null);
 //                    worldCol += 2;
 //                    worldRow += 2;
 
-                }else if(tileNum != 50){
-                    g2.drawImage( tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
                 }
 
-
+                // Land Mountain
+//                else if(tileNum == 7)
+//                {
+//                    g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize * 10, gp.tileSize * 10, null);
+////                    worldCol += 2;
+////                    worldRow += 2;
+//
+//                }
+                else if(tileNum != 50){
+                    g2.drawImage( tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+                }
 
             }
 
 
-
-//            g2.drawImage( tile[tileNum].image, x, y, gp.tileSize, gp.tileSize, null);
 
             worldCol++;
             col++;
