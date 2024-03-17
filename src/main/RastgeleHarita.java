@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class RastgeleHarita {
     public  void haritaolustur()  {
-        String dosyaYolu = "C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_1\\res1\\maps\\harita.txt";
+        String dosyaYolu = "C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_2\\res1\\maps\\harita.txt";
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter(dosyaYolu);

@@ -1,0 +1,101 @@
+@startuml
+
+abstract class Engel {
+    - Lokasyon: Lokasyon
+    + Genislik: int
+    + Yukseklik: int
+    + Ciz(Graphics): void
+    + Alan(): Rectangle
+    + CakisiyorMu(Engel): bool
+}
+
+class Lokasyon {
+    + X: int
+    + Y: int
+}
+
+abstract class Engel.HareketliEngel {
+}
+
+Engel <|-- Engel.HareketliEngel
+
+Engel "1" *-- "0..*" Engel
+
+class Kus {
+    + HareketMenzili: int
+    + orijinalY: int
+    - yukariMi: bool
+    - kusResmi: Image
+    + Ciz(Graphics): void
+    + HareketEt(Size, List<Engel>): void
+}
+
+Engel.HareketliEngel <|-- Kus
+
+class Ari {
+    + HareketMenzili: int
+    + orijinalX: int
+    - sagaMi: bool
+    - ariResmi: Image
+    + Ciz(Graphics): void
+    + HareketEt(Size, List<Engel>): void
+}
+
+Engel.HareketliEngel <|-- Ari
+
+class Dagi {
+    - DagiResmi: Image
+    + Ciz(Graphics): void
+}
+
+Engel <|-- Dagi
+
+class Agac {
+    - agacResmi: Image
+    + Ciz(Graphics): void
+}
+
+Engel <|-- Agac
+
+class Kaya {
+    - kayaResmi: Image
+    + Ciz(Graphics): void
+}
+
+Engel <|-- Kaya
+
+class Duvar {
+    - DuvarRengi: Color
+    + Ciz(Graphics): void
+}
+
+Engel <|-- Duvar
+
+abstract class Sandik {
+    - Resim: Image
+    + Ciz(Graphics): void
+}
+
+Engel <|-- Sandik
+
+class AltinSandik {
+}
+
+Sandik <|-- AltinSandik
+
+class GumusSandik {
+}
+
+Sandik <|-- GumusSandik
+
+class ZumrutSandik {
+}
+
+Sandik <|-- ZumrutSandik
+
+class BakirSandik {
+}
+
+Sandik <|-- BakirSandik
+
+@enduml

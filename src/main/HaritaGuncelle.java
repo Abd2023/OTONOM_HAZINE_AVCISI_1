@@ -41,11 +41,16 @@ public class HaritaGuncelle {
 
     public void rastgeleSifirlariDokuzaYap(int[][] harita) {
         Random rand = new Random();
+
+        //rockLand
         int sayac = 0;
         while (sayac < 5) {
             int satir = rand.nextInt(BOYUT);
             int sutun = rand.nextInt(BOYUT);
-            if (harita[satir][sutun] == 0) {
+            if (harita[satir][sutun] == 0
+            &&harita[satir][sutun] == 0
+                    &&harita[satir][sutun] == 0
+            &&harita[satir][sutun] == 0 ) {
 
                 for (int i = satir ; i < satir +2; i++) {
                     for (int j = sutun; j < sutun + 2; j++) {
@@ -99,42 +104,6 @@ public class HaritaGuncelle {
                 sayac++;
             }
         }
-
-
-//        int kusunUcmayaBasladigiYerX;
-//        int kusunUcmayaBasladigiYerY;
-//
-//        // kusun ucacagi kirmizi tilelar
-//        sayac=0;
-//        while (sayac < 2) {
-//            int satir = rand.nextInt(BOYUT);
-//            int sutun = rand.nextInt(BOYUT);
-//
-//            if (harita[satir][sutun] == 0
-//                    &&harita[satir+1][sutun] == 0
-//                    &&harita[satir+2][sutun] == 0
-//                    &&harita[satir+3][sutun] == 0
-//                    &&harita[satir+4][sutun] == 0
-//                    &&harita[satir+5][sutun] == 0
-//                    &&harita[satir+6][sutun] == 0
-//            ) {
-//                harita[satir][sutun] = 13;
-//                harita[satir+1][sutun] = 13;
-//                harita[satir+2][sutun] = 13;
-//                harita[satir+3][sutun] = 13;
-//                harita[satir+4][sutun] = 13;
-//                harita[satir+5][sutun] = 13;
-//                harita[satir+6][sutun] = 13;
-//
-//
-//                sayac++;
-//                kusunUcmayaBasladigiYerX=satir+3;
-//                kusunUcmayaBasladigiYerY=sutun;
-//
-//            }
-//        }
-
-
 
 
         //mehmet
@@ -255,29 +224,6 @@ public class HaritaGuncelle {
             }
         }
 
-
-//        // duar için
-//        sayac=0;
-//        while (sayac < 5) {
-//            int satir = rand.nextInt(BOYUT);
-//            int sutun = rand.nextInt(BOYUT);
-//            if (harita[satir][sutun] == 0) {
-//                harita[satir][sutun] = 8;
-//
-//                harita[satir][sutun + 1] = 50;
-//                harita[satir][sutun + 2] = 50;
-//                harita[satir][sutun + 3] = 50;
-//                harita[satir][sutun + 5] = 50;
-//                harita[satir][sutun + 6] = 50;
-//                harita[satir][sutun + 7] = 50;
-//                harita[satir][sutun + 8] = 50;
-//                harita[satir][sutun + 9] = 50;
-//
-//                sayac++;
-//            }
-//        }
-
-
     }
 
 
@@ -309,7 +255,7 @@ public class HaritaGuncelle {
     }
 
     public static void TumIslemler() {
-        String dosyaYolu = "C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_1\\res1\\maps\\harita.txt";
+        String dosyaYolu = "C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_2\\res1\\maps\\harita.txt";
         HaritaGuncelle haritaGuncelle = new HaritaGuncelle();
         int[][] harita = haritaGuncelle.haritayiOku(dosyaYolu);
 
@@ -324,7 +270,7 @@ public class HaritaGuncelle {
             }
             System.out.println();
         }
-        String dosyaYolu2="C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_1\\res1\\maps\\yeniMatris.txt";
+        String dosyaYolu2="C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_2\\res1\\maps\\yeniMatris.txt";
 
         haritaGuncelle.matrisiDosyayaYaz(harita, dosyaYolu2);
 

@@ -206,7 +206,7 @@ public class AssetSetter {
 
 
 
-        String dosyaYolu2="C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_1\\ensonmatris.txt";
+        String dosyaYolu2="C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_2\\ensonmatris.txt";
 
         matrisiDosyayaYaz(harita, dosyaYolu2);
 
@@ -216,7 +216,7 @@ public class AssetSetter {
 
     public void setNPC() {
 
-        String dosyaYolu = "C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_1\\res1\\maps\\yeniMatris.txt";
+        String dosyaYolu = "C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_2\\res1\\maps\\yeniMatris.txt";
         int[][] harita= haritayiOku(dosyaYolu);
 
         int sayac=0;
@@ -324,7 +324,7 @@ public class AssetSetter {
 
 
 
-        String dosyaYolu2 = "C:\\Users\\Didim1\\IdeaProjects\\OTONOM_HAZINE_AVCISI_1_pazar\\res1\\maps\\ensonmatris.txt";
+        String dosyaYolu2 = "C:\\Users\\Abdullah Amin\\IdeaProjects\\OTONOM_HAZINE_AVCISI_2\\res1\\maps\\ensonmatris.txt";
 
         matrisiDosyayaYaz(harita,dosyaYolu2);
 
